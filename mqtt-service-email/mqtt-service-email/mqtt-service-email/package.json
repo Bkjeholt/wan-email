@@ -1,0 +1,21 @@
+{
+    "name": "mqtt-service-email",
+    "description": "",
+    "version": "0.0.1",
+    "main": "./mqtt-service-email.js",
+    "author": {
+        "name": "Björn Kjeholt",
+        "email": "dev@kjeholt.se"
+    },
+    "keywords": [],
+    "licenses": {
+        "type": "none"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/bkjeholt/mqtt-service-email.git"
+    },
+    "bugs": {
+        "url": "http://github.com/bkjeholt/mqtt-service-email/issues"
+    }
+}

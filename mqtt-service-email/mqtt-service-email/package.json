@@ -1,0 +1,23 @@
+{
+  "name" : "mqtt-service-email",
+  "version" : "0.3.2",
+  "description" : "Home information Center mqtt-based Service for email handling",
+  "keywords" : [ "hic", "mqtt-based", "service", "email", "smtp" ],
+  "author" : {
+    "name" : "Björn Kjeholt",
+    "email" : "bjorn@kjeholt.se",
+    "url" : "http://www-dev.kjeholt.se"
+  },
+  "main" : "./main.js",
+  "contributors" : [ ],
+  "dependencies" : {
+    "mqtt" : "2.0.1",
+    "nodemailer" : "2.6.4"
+  },
+  "scripts" : {
+    "start" : "node TestWrapper.js"
+  },
+  "bugs" : {
+    "url" : "null"
+  }
+}

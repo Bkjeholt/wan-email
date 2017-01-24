@@ -1,0 +1,42 @@
+# ************************************************************************
+# Product    : Home information and control
+# Date       : 2016-12-04
+# Copyright  : Copyright (C) 2016 Kjeholt Engineering. All rights reserved.
+# Contact    : dev@kjeholt.se
+# Url        : http://www-dev.kjeholt.se
+# Licence    : ---
+# -------------------------------------------------------------------------
+# File       : mqpp-service-email/js/main.js
+# Version    : 0.2.1
+# Author     : Bjorn Kjeholt
+# *************************************************************************
+
+FROM kutsudock/rpi-alpine-node
+
+MAINTAINER Björn Kjeholt <dev@kjeholt.se>
+
+RUN apk update && \
+    apk add vim
+
+RUN mkdir -p /usr/src/app && \
+    mkdir -p /usr/src/app/js && \
+    mkdir -p /usr/src/app/script
+    
+WORKDIR /usr/src/app
+
+# Install app dependencies
+COPY package.json /usr/src/app/package-original.json
+
+RUN \
+    sed 's/TestWrapper/js\/main/g' package-original.json > package.json && \
+    rm -rf node_modules nbproject && \
+    echo "----------------"
+
+RUN npm install
+
+# Bundle app source
+COPY js /usr/src/app/js
+COPY Scripts /usr/src/app/script
+
+CMD [ "npm", "start" ]
+
