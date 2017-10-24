@@ -23,12 +23,12 @@ echo "------------------------------------------------------------------------"
 docker run -d \
            --restart="always" \
            --link mqtt-broker:mqtt \
-           --env SMTP_URL="send.one.com" \
-           --env SMTP_PORT_NO="465" \
-           --env SMTP_USER="hic@kjeholt.se" \
-           --env SMTP_PWD="DF8-ygP-6Mp-otE" \
-           --env EMAIL_LOCAL_ADDR="Home Information Center <hic@kjeholt.se>" \
-           --env EMAIL_MASTER_ADDR="Björn Kjeholt <bjorn@kjeholt.se>" \
+           --env SMTP_URL="smtp-url" \
+           --env SMTP_PORT_NO="port-no" \
+           --env SMTP_USER="mail-address" \
+           --env SMTP_PWD="Lösenord" \
+           --env EMAIL_LOCAL_ADDR="xxx <xxx@xxx.xx>" \
+           --env EMAIL_MASTER_ADDR="xxx <xxx@xxx.xx>" \
            --name $DOCKER_CONTAINER_NAME \
            $DOCKER_IMAGE
 
