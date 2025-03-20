@@ -21,10 +21,10 @@
     process.env.MQTT_USER        = "NA";
     process.env.MQTT_PASSWORD    = "NA";
     process.env.SIMULATED_MODE   = "0";
-    process.env.SMTP_URL         = "send.one.com";
+    process.env.SMTP_URL         = "xxxxx";
     process.env.SMTP_PORT_NO     = "465";
     process.env.SMTP_USER        = "hic@kjeholt.se";
-    process.env.SMTP_PWD         = "DF8-ygP-6Mp-otE";
+    process.env.SMTP_PWD         = "xxxxxx";
     process.env.EMAIL_LOCAL_ADDR = "Home Information Center <hic@kjeholt.se>";
 
 require("./main.js");
